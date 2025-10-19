@@ -2,6 +2,7 @@ package com.health.dto;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -36,7 +37,7 @@ public class ProductDTO {
     private String productPresentation;
 
     @NotNull
-    @Min(1)
+    @DecimalMin("0.01")
     private Double productUnitPrice;
 
     @NotNull
